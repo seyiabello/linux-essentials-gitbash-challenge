@@ -1,0 +1,23 @@
+  166  pwd
+  167  mkdir advanced_directory && cd advanced_directory
+  168  touch file_a.txt file_b.txt && ls -1
+  169  ln -s file_a.txt link_to_file_a
+  170  chmod 644 file_b.txt
+  171  mkdir nested_directory && cp file_a.txt file_b.txt nested_directory/
+  172  cd nested_directory && echo "Hello World" > secret.txt
+  173  mv file_a.txt file_b.txt ..
+  174  cd .. && touch .hidden_file
+  175  ls -alh
+  176  mkdir backup
+  177  tar --exclude='backup' -cvf backup/archive.tar .
+  178  mkdir restore
+  179  tar -xvf backup/archive.tar -C restore
+  180  touch temp.txt && ln temp.txt hard_link_to_temp
+  181  find . -type f -name "*.txt"
+  182  rm -rf backup && find restore -type f -name "*.txt" -delete
+  183  ln -s restore restore_link
+  184  find . -type f -mtime -7
+  185  grep -R "Hello World" --include="*.txt" .
+  186  mv nested_directory/secret.txt nested_directory/hidden_secret.txt
+  187  cp -r restore duplicate_restore
+  188  history | tail -n 30 > gitbash_challenge_history.txt
